@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/library/alpine:3.18
+FROM mirrors.tencent.com/library/alpine:3.18
 
 WORKDIR /app
 
