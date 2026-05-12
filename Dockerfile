@@ -1,4 +1,4 @@
-FROM alpine:3.18
+FROM registry.cn-hangzhou.aliyuncs.com/library/alpine:3.18
 
 WORKDIR /app
 
