@@ -2,8 +2,8 @@ pipeline {
     agent any
     
     environment {
-        REGISTRY = "crpi-w63lzfggxh0bmatq.cn-beijing.personal.cr.aliyuncs.com/hestic/hestic"
-        IMAGE_NAME = ""
+        REGISTRY = "crpi-w63lzfggxh0bmatq.cn-beijing.personal.cr.aliyuncs.com"
+        IMAGE_NAME = "hestic/hestic"
         ACR_CREDS_ID = "aliyun-acr-creds"
         GIT_CREDS_ID = "github-token"
     }
