@@ -43,7 +43,7 @@ pipeline {
                             icacls %SSH_KEY% /inheritance:r
                             icacls %SSH_KEY% /grant:r "SYSTEM:F"
                             icacls %SSH_KEY% /grant:r "%USERNAME%:F"
-                            ssh -i %SSH_KEY% -o StrictHostKeyChecking=no root@${ECS_IP} "docker login --username=%ACR_USR% --password=%ACR_PW% ${REGISTRY} && docker stop my-app; docker rm my-app; docker pull ${REGISTRY}/${IMAGE_NAME}:%BUILD_ID% && docker run -d --name my-app -p 80:80 ${REGISTRY}/${IMAGE_NAME}:%BUILD_ID%"
+                            ssh -i %SSH_KEY% -o StrictHostKeyChecking=no root@${ECS_IP} "docker login --username=%ACR_USR% --password=%ACR_PW% ${REGISTRY} && docker stop my-app; docker rm my-app; docker pull ${REGISTRY}/${IMAGE_NAME}:%BUILD_ID% && docker run -d --name my-app -p 9191:80 ${REGISTRY}/${IMAGE_NAME}:%BUILD_ID%"
                         """
                     }
                 }
